@@ -1,19 +1,14 @@
-import React, { useState } from "react";
-import Info from "./Info";
+import React from "react";
+// import Todos from "./components/Todos";
+import CounterContainer from "./containers/CounterContainer";
+import TodosContainer from "./containers/TodosContainer";
 
 const App = () => {
-    const [visible, setVisible] = useState(false);
     return (
         <div>
-            <button
-                onClick={() => {
-                    setVisible(!visible);
-                }}
-            >
-                {visible ? "숨기기" : "보이기"}
-            </button>
+            <CounterContainer />
             <hr />
-            {visible && <Info />}
+            <TodosContainer />
         </div>
     );
 };
